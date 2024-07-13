@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react'
 import CartoonNetworkWebsite from './CartoonNetworkWebsite'
 import { CN } from './CN'
 
-const Laptop = () => {
+const Laptop = ({ powertonImage }) => {
     const laptopRef = useRef()
     const { scene: laptopScene } = useGLTF("https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf")
     const { scene: deskScene } = useGLTF("/desk.glb")
@@ -20,7 +20,7 @@ const Laptop = () => {
         return (
             <Html fullscreen>
                 <div style={{ width: '100vw', height: '100vh', position: 'relative', overflow: 'auto' }}>
-                    <CartoonNetworkWebsite />
+                    <CartoonNetworkWebsite powertonImage={powertonImage} />
                     <button 
                         onClick={handleToggleFullScreen}
                         style={{
@@ -47,28 +47,24 @@ const Laptop = () => {
         <>
             <Environment preset='warehouse'/>
             
-            {/* Static Desk */}
             <primitive 
                 object={deskScene} 
                 scale={1.8}
                 position={[0, -2, 0]}
             />
 
-            {/* Johnny Bravo to the right of the desk */}
             <primitive 
                 object={bravoScene} 
                 scale={0.5}
                 position={[3, -2, 0]}
             />
 
-            {/* Courage to the left of the desk */}
             <primitive 
                 object={courageScene} 
                 scale={0.5}
                 position={[-3, -2, 0]}
             />
             
-            {/* Laptop */}
             <group ref={laptopRef} position={[0, -.3, 0]} scale={0.35}>
                 <primitive object={laptopScene} />
                 
@@ -88,7 +84,7 @@ const Laptop = () => {
                             pointerEvents: 'auto'
                         }}
                     >
-                        <CartoonNetworkWebsite />
+                        <CartoonNetworkWebsite powertonImage={powertonImage} />
                     </div>
                 </Html>
             </group>

@@ -4,7 +4,7 @@ import RobinsWhackAVillain from './RobinsWhackAVillain';
 
 const characters = [
   { name: "Ruben", image: "/ruben.png" },
-  { name: "Tons", image: "/Tons.png" },
+  { name: "Powerton", image: "/powerton-09.png" },
   { name: "Doxter", image: "/Doxter.png" },
   { name: "Fridd", image: "/Fridd.png" }
 ];
