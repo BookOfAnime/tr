@@ -1,4 +1,4 @@
-import { Environment, Html, PresentationControls, useGLTF, Text } from '@react-three/drei'
+import { Environment, Html, PresentationControls, useGLTF, Text, useFont } from '@react-three/drei'
 import React, { useRef, useState } from 'react'
 import { Box } from '@react-three/drei'
 import CartoonNetworkWebsite from './CartoonNetworkWebsite'
@@ -22,6 +22,7 @@ const Laptop = ({ powertonImage }) => {
         e.stopPropagation()
         setIsFullScreen(!isFullScreen)
     }
+    
 
     if (isFullScreen) {
         return (
@@ -82,9 +83,8 @@ const Laptop = ({ powertonImage }) => {
             
             <primitive 
                 object={jakeScene} 
-                scale={0.15}
-                position={[1, -0.5, -0.5]}
-                rotation={[0, -Math.PI / 4, 0]}
+                scale={0.05}
+                position={[1, .1, -0.5]}
             />
             
             <primitive 
@@ -141,8 +141,8 @@ const Laptop = ({ powertonImage }) => {
                     </Box>
                     <primitive 
                         object={blossomScene} 
-                        scale={0.32}
-                        position={[0, 0.7, 0]}
+                        scale={0.52}
+                        position={[0, 0.5, 0]}
                     />
                 </group>
 
@@ -153,7 +153,7 @@ const Laptop = ({ powertonImage }) => {
                         <Text 
                             position={[0, 0, 0.51]} 
                             fontSize={0.8} 
-                            color="#000000"
+                            color="#0098ea"
                             anchorX="center"
                             anchorY="middle"
                         >
@@ -162,8 +162,8 @@ const Laptop = ({ powertonImage }) => {
                     </Box>
                     <primitive 
                         object={macScene} 
-                        scale={0.12}
-                        position={[0, 0.7, 0]}
+                        scale={0.6}
+                        position={[0, 0.5, 0]}
                     />
                 </group>
             </group>
