@@ -17,6 +17,8 @@ const Laptop = ({ powertonImage }) => {
     const { scene: blossomScene } = useGLTF("/blossom.glb")
     const { scene: macScene } = useGLTF("/mac.glb")
     const [isFullScreen, setIsFullScreen] = useState(false)
+    const fontProps = { font: '/new.ttf', fontSize: 2.5, letterSpacing: -0.05, lineHeight: 1, 'material-toneMapped': false,color: "#0098ea"}
+
 
     const handleToggleFullScreen = (e) => {
         e.stopPropagation()
@@ -128,11 +130,12 @@ const Laptop = ({ powertonImage }) => {
                 {/* C box with Blossom */}
                 <group position={[-0.45, -.2, 0]}>
                     <Box args={[1, 1, 1]}>
-                        <meshStandardMaterial color="#000000" />
+                        <meshStandardMaterial color="#0098ea" />
                         <Text 
+                            {...fontProps}
                             position={[0, 0, 0.51]} 
                             fontSize={0.8} 
-                            color="#FFFFFF"
+                            color="#0098ea"
                             anchorX="center"
                             anchorY="middle"
                         >
@@ -149,8 +152,9 @@ const Laptop = ({ powertonImage }) => {
                 {/* N box with Mac */}
                 <group position={[0.55, -.2, 0]}>
                     <Box args={[1, 1, 1]}>
-                        <meshStandardMaterial color="#FFFFFF" />
+                        <meshStandardMaterial color="#0098ea" />
                         <Text 
+                        {...fontProps}
                             position={[0, 0, 0.51]} 
                             fontSize={0.8} 
                             color="#0098ea"
@@ -167,34 +171,54 @@ const Laptop = ({ powertonImage }) => {
                     />
                 </group>
             </group>
-            
             <Html
-                position={[0, 0, 0]}
-                wrapperClass="fullscreen-button"
-                center
-            >
-                <button 
-                    onClick={handleToggleFullScreen}
-                    style={{
-                        padding: '15px 30px',
-                        fontSize: 'max(16px, min(5vw, 24px))',
-                        backgroundColor: '#ff4500',
-                        color: 'white',
-                        border: 'none',
-                        borderRadius: '5px',
-                        cursor: 'pointer',
-                        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-                        transition: 'all 0.3s ease',
-                        pointerEvents: 'auto',
-                        position:'relative',
-                        top:"30vh",
-                    }}
-                    onMouseEnter={(e) => e.target.style.backgroundColor = '#ff6347'}
-                    onMouseLeave={(e) => e.target.style.backgroundColor = '#ff4500'}
-                >
-                    Enter Site
-                </button>
-            </Html>
+    position={[0, 0, 0]}
+    wrapperClass="fullscreen-button"
+    center
+>
+    <button 
+        onClick={handleToggleFullScreen}
+        style={{
+            padding: '20px 40px',
+            fontSize: 'max(18px, min(5vw, 28px))',
+            fontWeight: 'bold',
+            backgroundColor: '#0098ea',
+            color: 'white',
+            border: 'none',
+            borderRadius: '50px',
+            cursor: 'pointer',
+            boxShadow: '0 6px 0 #0072b1, 0 12px 20px rgba(0, 0, 0, 0.2)',
+            transition: 'all 0.3s ease',
+            pointerEvents: 'auto',
+            position: 'relative',
+            top: "30vh",
+            textTransform: 'uppercase',
+            letterSpacing: '2px',
+            overflow: 'hidden',
+        }}
+    >
+        <span 
+            style={{
+                display: 'inline-block',
+                transition: 'transform 0.3s ease',
+            }}
+        >
+            Come on in!
+        </span>
+        <style jsx>{`
+            button:hover {
+                background-color: #00a8ff;
+                box-shadow: 0 4px 0 #0072b1, 0 8px 16px rgba(0, 0, 0, 0.3);
+                transform: translateY(2px);
+            }
+            button:active {
+                background-color: #0072b1;
+                box-shadow: 0 2px 0 #005b8e, 0 6px 10px rgba(0, 0, 0, 0.3);
+                transform: translateY(4px);
+            }
+        `}</style>
+    </button>
+</Html>
         </>
     )
 }

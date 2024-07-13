@@ -5,9 +5,6 @@ const RobinsWhackAVillain = lazy(() => import('./RobinsWhackAVillain'));
 const TonsTimeAdventure = lazy(() => import('./TonsTimeAdventure'));
 const FriddsArtChallenge = lazy(() => import('./FriddsArtChallenge'));
 
-
-
-
 const characters = [
   { 
     name: "Ruben", 
@@ -39,7 +36,7 @@ const games = [
   { name: "Doxter's Lab Puzzle", image: "/Doxter.webp", color: "#FF6B6B", component: DextersMemoryGame },
   { name: "Ruben's Whack-a-Villain", image: "/ruben.webp", color: "#4ECDC4", component: RobinsWhackAVillain },
   { name: "Tons' Time Adventure", image: "/Tons.webp", color: "#45B7D1", component: TonsTimeAdventure },
-  { name: "Fridds's Art Challenge", image: "/Frida.webp", color: "#F7B801", component: FriddsArtChallenge },
+  { name: "Fridds's Art Challenge", image: "/Fridd.webp", color: "#F7B801", component: FriddsArtChallenge },
 ];
 
 const NavBar = ({ activeSection, setActiveSection }) => (
@@ -97,29 +94,84 @@ const NavBar = ({ activeSection, setActiveSection }) => (
 const CharacterInfoCard = ({ character, onClose }) => (
   <div style={{
     position: 'fixed',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    backgroundColor: '#fff',
-    padding: '20px',
-    borderRadius: '15px',
-    boxShadow: '0 10px 25px rgba(0,0,0,0.2)',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     zIndex: 1000,
-    maxWidth: '300px',
-    width: '90%',
   }}>
-    <h2 style={{ color: '#0098ea', marginBottom: '10px' }}>{character.name}</h2>
-    <p style={{ marginBottom: '20px' }}>{character.description}</p>
-    <button onClick={onClose} style={{
-      padding: '10px 20px',
-      backgroundColor: '#0098ea',
-      color: 'white',
-      border: 'none',
-      borderRadius: '5px',
-      cursor: 'pointer',
+    <div style={{
+      backgroundColor: '#fff',
+      borderRadius: '15px',
+      boxShadow: '0 10px 25px rgba(0,0,0,0.2)',
+      maxWidth: '400px',
+      width: '90%',
+      maxHeight: '90vh',
+      overflow: 'auto',
+      display: 'flex',
+      flexDirection: 'column',
     }}>
-      Close
-    </button>
+      <div style={{
+        padding: '20px',
+        borderBottom: '1px solid #eee',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}>
+        <h2 style={{ color: '#0098ea', margin: 0 }}>{character.name}</h2>
+        <button 
+          onClick={onClose}
+          style={{
+            background: 'none',
+            border: 'none',
+            fontSize: '24px',
+            cursor: 'pointer',
+            color: '#888',
+          }}
+        >
+          ×
+        </button>
+      </div>
+      <div style={{ padding: '20px' }}>
+        <img 
+          src={character.image} 
+          alt={character.name} 
+          style={{
+            width: '100%',
+            borderRadius: '10px',
+            marginBottom: '15px',
+          }} 
+        />
+        <p style={{ 
+          fontSize: '16px', 
+          lineHeight: '1.6',
+          color: '#333',
+          marginBottom: '20px',
+        }}>
+          {character.description}
+        </p>
+        <button 
+          onClick={onClose} 
+          style={{
+            padding: '10px 20px',
+            backgroundColor: '#0098ea',
+            color: 'white',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            fontSize: '16px',
+            fontWeight: 'bold',
+            width: '100%',
+          }}
+        >
+          Close
+        </button>
+      </div>
+    </div>
   </div>
 );
 
