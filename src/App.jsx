@@ -29,7 +29,7 @@ const LoadingScreen = ({ progress }) => (
       borderRadius: '10px',
     }}>
       <h2 style={{ color: '#fff', marginTop: '20px', fontFamily: 'Arial, sans-serif' }}>
-        Loading Cartoon Network...
+        Loading CarTON Network...
       </h2>
       <div style={{ width: '200px', backgroundColor: '#4ECDC4', borderRadius: '10px', marginTop: '20px' }}>
         <div style={{
