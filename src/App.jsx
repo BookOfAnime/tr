@@ -14,7 +14,7 @@ const LoadingScreen = ({ progress }) => (
     width: '100vw',
     height: '100vh',
     backgroundImage: 'url(/banner-11.png)',
-    backgroundSize: 'cover',
+    backgroundSize: 'contain',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     display: 'flex',
@@ -74,12 +74,12 @@ const Scene = () => {
   }, [camera, cameraPosition]);
 
   return (
-    <PresentationControls 
-      global 
-      rotation={[0.13, 0.1, 0]} 
-      polar={[-0.2, 0.2]} 
-      azimuth={[-0.5, 0.5]} 
-      config={{ mass: 2, tension: 400 }} 
+    <PresentationControls
+      global
+      rotation={[0.13, 0.1, 0]}
+      polar={[-0.2, 0.2]}
+      azimuth={[-0.5, 0.5]}
+      config={{ mass: 2, tension: 400 }}
       snap={{ mass: 4, tension: 400 }}
     >
       <group scale={scale}>

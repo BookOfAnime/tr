@@ -1,5 +1,6 @@
-import { Environment, Html, PresentationControls, useGLTF } from '@react-three/drei'
+import { Environment, Html, PresentationControls, useGLTF, Text } from '@react-three/drei'
 import React, { useRef, useState } from 'react'
+import { Box } from '@react-three/drei'
 import CartoonNetworkWebsite from './CartoonNetworkWebsite'
 import { CN } from './CN'
 
@@ -9,6 +10,12 @@ const Laptop = ({ powertonImage }) => {
     const { scene: deskScene } = useGLTF("/desk.glb")
     const { scene: bravoScene } = useGLTF("/bravo.glb")
     const { scene: courageScene } = useGLTF("/courage.glb")
+    const { scene: bmoScene } = useGLTF("/bmo.glb")
+    const { scene: jakeScene } = useGLTF("/jake.glb")
+    const { scene: captainScene } = useGLTF("/captain.glb")
+    const { scene: dexterScene } = useGLTF("/dexter.glb")
+    const { scene: blossomScene } = useGLTF("/blossom.glb")
+    const { scene: macScene } = useGLTF("/mac.glb")
     const [isFullScreen, setIsFullScreen] = useState(false)
 
     const handleToggleFullScreen = (e) => {
@@ -65,6 +72,33 @@ const Laptop = ({ powertonImage }) => {
                 position={[-3, -2, 0]}
             />
             
+            {/* Models on the desk */}
+            <primitive 
+                object={bmoScene} 
+                scale={0.2}
+                position={[-1, -0.5, -0.5]}
+                rotation={[0, Math.PI / 4, 0]}
+            />
+            
+            <primitive 
+                object={jakeScene} 
+                scale={0.15}
+                position={[1, -0.5, -0.5]}
+                rotation={[0, -Math.PI / 4, 0]}
+            />
+            
+            <primitive 
+                object={captainScene} 
+                scale={0.1}
+                position={[-0.8, -0.5, 0.8]}
+            />
+            
+            <primitive 
+                object={dexterScene} 
+                scale={0.1}
+                position={[0.8, -0.5, 0.8]}
+            />
+            
             <group ref={laptopRef} position={[0, -.3, 0]} scale={0.35}>
                 <primitive object={laptopScene} />
                 
@@ -87,6 +121,51 @@ const Laptop = ({ powertonImage }) => {
                         <CartoonNetworkWebsite powertonImage={powertonImage} />
                     </div>
                 </Html>
+            </group>
+            
+            {/* C and N boxes with Blossom and Mac on top */}
+            <group position={[0, 1.5, 0]}>
+                {/* C box with Blossom */}
+                <group position={[-0.45, -.2, 0]}>
+                    <Box args={[1, 1, 1]}>
+                        <meshStandardMaterial color="#000000" />
+                        <Text 
+                            position={[0, 0, 0.51]} 
+                            fontSize={0.8} 
+                            color="#FFFFFF"
+                            anchorX="center"
+                            anchorY="middle"
+                        >
+                            C
+                        </Text>
+                    </Box>
+                    <primitive 
+                        object={blossomScene} 
+                        scale={0.32}
+                        position={[0, 0.7, 0]}
+                    />
+                </group>
+
+                {/* N box with Mac */}
+                <group position={[0.55, -.2, 0]}>
+                    <Box args={[1, 1, 1]}>
+                        <meshStandardMaterial color="#FFFFFF" />
+                        <Text 
+                            position={[0, 0, 0.51]} 
+                            fontSize={0.8} 
+                            color="#000000"
+                            anchorX="center"
+                            anchorY="middle"
+                        >
+                            N
+                        </Text>
+                    </Box>
+                    <primitive 
+                        object={macScene} 
+                        scale={0.12}
+                        position={[0, 0.7, 0]}
+                    />
+                </group>
             </group>
             
             <Html
@@ -127,3 +206,9 @@ useGLTF.preload("https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/publ
 useGLTF.preload("/desk.glb")
 useGLTF.preload("/bravo.glb")
 useGLTF.preload("/courage.glb")
+useGLTF.preload("/bmo.glb")
+useGLTF.preload("/jake.glb")
+useGLTF.preload("/captain.glb")
+useGLTF.preload("/dexter.glb")
+useGLTF.preload("/blossom.glb")
+useGLTF.preload("/mac.glb")

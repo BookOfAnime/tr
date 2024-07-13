@@ -140,7 +140,7 @@ const CartoonNetworkWebsite = () => {
       case 'home':
         return (
           <div>
-            <h1 style={{ color: '#fff', marginBottom: '30px', fontSize: '3em', textAlign: 'center' }}>Welcome to Cartoon Network Reimagined</h1>
+            <h1 style={{ color: '#fff', marginBottom: '30px', fontSize: '3em', textAlign: 'center' }}>Welcome to CarTON Network </h1>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '30px', marginBottom: '50px' }}>
               {characters.map(char => (
                 <CharacterSpotlight key={char.name} character={char} onClick={() => setActiveSection('characters')} />
@@ -157,7 +157,7 @@ const CartoonNetworkWebsite = () => {
       case 'games':
         return (
           <div>
-            <h1 style={{ color: '#fff', marginBottom: '30px', fontSize: '3em', textAlign: 'center' }}>Cartoon Network Games</h1>
+            <h1 style={{ color: '#fff', marginBottom: '30px', fontSize: '3em', textAlign: 'center' }}>CarTON Network Games</h1>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '30px' }}>
               {games.map(game => (
                 <GameCard key={game.name} game={game} onClick={(game) => setActiveGame(game.name)} />
@@ -181,11 +181,12 @@ const CartoonNetworkWebsite = () => {
           <div>
             <h1 style={{ color: '#fff', marginBottom: '30px', fontSize: '3em', textAlign: 'center' }}>About CN Reimagined</h1>
             <p style={{ color: '#fff', fontSize: '1.2em', lineHeight: '1.6', maxWidth: '800px', margin: '0 auto' }}>
-              CN Reimagined brings your favorite Cartoon Network characters to life in a whole new way. 
+              CN Reimagined brings your favorite CarTON Network characters to life in a whole new way. 
               Join Ruben, Tons, Doxter, and Frida on exciting adventures and challenging games. 
               This is where nostalgia meets the future of animation!
             </p>
           </div>
+
         );
       default:
         return null;
@@ -243,7 +244,7 @@ const CartoonNetworkWebsite = () => {
         padding: '30px 5%',
         textAlign: 'center',
       }}>
-        <p>© 2024 Cartoon Network Reimagined. All rights reserved.</p>
+        <p>© 2024 CarTON Network Reimagined. All rights reserved.</p>
       </footer>
     </div>
   );
