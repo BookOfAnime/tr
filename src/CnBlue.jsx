@@ -3,7 +3,7 @@ import { useGLTF } from '@react-three/drei'
 
 export function CNBlue(props) {
   const group = useRef()
-  const { scene } = useGLTF('./cnBlue.gltf')
+  const { scene } = useGLTF('./cnBlue.glb')
 
   return (
     <group ref={group} {...props} dispose={null}>
