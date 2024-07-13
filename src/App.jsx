@@ -84,7 +84,7 @@ const Scene = () => {
     >
       <group scale={scale}>
         <Laptop powertonImage="/powerton-09.png" />
-        <CNBlue scale={0.4} position={[0, 1.35, 0]}/>
+        {/* <CNBlue scale={0.4} position={[0, 1.35, 0]}/> */}
       </group>
       <ambientLight intensity={10} />
     </PresentationControls>
