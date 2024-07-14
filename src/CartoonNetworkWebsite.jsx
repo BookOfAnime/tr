@@ -56,7 +56,7 @@ const NavBar = ({ activeSection, setActiveSection }) => (
       maxWidth: '1200px',
       margin: '0 auto',
     }}>
-      <div style={{ fontWeight: 'bold', fontSize: '28px', cursor: 'pointer', color: '#0098ea' }} onClick={() => setActiveSection('home')}>CartTON Network</div>
+      <div style={{ fontWeight: 'bold', fontSize: '28px', cursor: 'pointer', color: '#0098ea' }} onClick={() => setActiveSection('home')}>CarTON Network</div>
       <div style={{
         display: 'flex',
         gap: '30px',
@@ -294,7 +294,7 @@ const CartoonNetworkWebsite = () => {
       case 'home':
         return (
           <div>
-            <h1 style={{ color: '#0098ea', marginBottom: '30px', fontSize: '3em', textAlign: 'center', textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>Welcome to CartTON Network</h1>
+            <h1 style={{ color: '#0098ea', marginBottom: '30px', fontSize: '3em', textAlign: 'center', textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>Welcome to CarTON Network</h1>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px', marginBottom: '50px' }}>
               {characters.map(char => (
                 <CharacterSpotlight key={char.name} character={char} onClick={handleCharacterClick} />
@@ -311,7 +311,7 @@ const CartoonNetworkWebsite = () => {
       case 'games':
         return (
           <div>
-            <h1 style={{ color: '#0098ea', marginBottom: '30px', fontSize: '3em', textAlign: 'center', textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>CartTON Network Games</h1>
+            <h1 style={{ color: '#0098ea', marginBottom: '30px', fontSize: '3em', textAlign: 'center', textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>CarTON Network Games</h1>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '30px' }}>
               {games.map(game => (
                 <GameCard key={game.name} game={game} onClick={(game) => setActiveGame(game.name)} />
@@ -333,9 +333,9 @@ const CartoonNetworkWebsite = () => {
       case 'about':
         return (
           <div>
-            <h1 style={{ color: '#0098ea', marginBottom: '30px', fontSize: '3em', textAlign: 'center', textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>About CartTON Network</h1>
+            <h1 style={{ color: '#0098ea', marginBottom: '30px', fontSize: '3em', textAlign: 'center', textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>About CarTON Network</h1>
             <p style={{ color: '#fff', fontSize: '1.2em', lineHeight: '1.6', maxWidth: '800px', margin: '0 auto', textAlign: 'center', backgroundColor: 'rgba(0,0,0,0.5)', padding: '20px', borderRadius: '15px' }}>
-              CartTON Network brings your favorite cartoon characters to life in a whole new way. 
+              CarTON Network brings your favorite cartoon characters to life in a whole new way. 
               Join Ruben, Tons, Doxter, and Frida on exciting adventures and challenging games. 
               This is where nostalgia meets the future of Crypto!
             </p>
@@ -406,7 +406,7 @@ const CartoonNetworkWebsite = () => {
         padding: '30px 5%',
         textAlign: 'center',
       }}>
-        <p>© 2024 CartTON Network. All rights reserved.</p>
+        <p>© 2024 CarTON Network. All rights reserved.</p>
       </footer>
     </div>
   );

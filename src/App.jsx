@@ -5,6 +5,7 @@ import Laptop from './Laptop';
 import { CNBlue } from './CnBlue';
 import './App.css';
 
+
 // Loading Screen Component
 const LoadingScreen = ({ progress }) => (
   <div style={{
@@ -75,9 +76,10 @@ const Scene = () => {
 
   return (
     <PresentationControls
+    enableZoom
       global
       rotation={[0.13, 0.1, 0]}
-      polar={[-0.2, 0.2]}
+      polar={[-0.1, 0.1]}
       azimuth={[-0.5, 0.5]}
       config={{ mass: 2, tension: 400 }}
       snap={{ mass: 4, tension: 400 }}

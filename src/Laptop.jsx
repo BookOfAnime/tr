@@ -35,8 +35,8 @@ const Laptop = ({ powertonImage }) => {
                         onClick={handleToggleFullScreen}
                         style={{
                             position: 'fixed',
-                            top: '10px',
-                            right: '10px',
+                            bottom: '-40vh',
+                            right: '20px',
                             padding: '10px',
                             backgroundColor: '#ff4500',
                             color: 'white',
