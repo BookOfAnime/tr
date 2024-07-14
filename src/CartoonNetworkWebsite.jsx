@@ -44,7 +44,7 @@ const NavBar = ({ activeSection, setActiveSection }) => (
     backgroundColor: 'rgba(0, 0, 0, 0.8)',
     backdropFilter: 'blur(10px)',
     color: '#fff',
-    padding: '15px 5%',
+    padding: '10px 5%',
     position: 'sticky',
     top: 0,
     zIndex: 1000,
@@ -56,10 +56,17 @@ const NavBar = ({ activeSection, setActiveSection }) => (
       maxWidth: '1200px',
       margin: '0 auto',
     }}>
-      <div style={{ fontWeight: 'bold', fontSize: '28px', cursor: 'pointer', color: '#0098ea' }} onClick={() => setActiveSection('home')}>CarTON Network</div>
+      <a href="https://www.dextools.io/app/en/ton/pair-explorer/EQAwLWdyWQ1h4wLbdLqq6HmDI8EFayNPcAJ9rtsh4q2EEGyT?t=1720998783266" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+        <img 
+          src="/dt.png" 
+          alt="CarTON Network Logo" 
+          style={{ height: '40px', marginRight: '10px' }} 
+        />
+        <div style={{ fontWeight: 'bold', fontSize: '24px', color: '#0098ea' }}>CarTON Network</div>
+      </a>
       <div style={{
         display: 'flex',
-        gap: '30px',
+        gap: '20px',
         alignItems: 'center',
       }}>
         {['HOME', 'GAMES', 'CHARACTERS', 'ABOUT'].map(item => (
@@ -87,16 +94,17 @@ const NavBar = ({ activeSection, setActiveSection }) => (
             }}></span>
           </div>
         ))}
-        <a href="https://t.me/ctonnetwork" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>
+        <a href="https://t.me/CarTONNetwork" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>
           Telegram
         </a>
-        <a href="https://x.com/CTon_Network" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>
+        <a href="https://twitter.com/CarTONNetwork" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>
           Twitter
         </a>
       </div>
     </div>
   </nav>
 );
+
 const CharacterInfoCard = ({ character, onClose }) => (
   <div style={{
     position: 'fixed',
