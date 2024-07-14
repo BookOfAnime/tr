@@ -60,6 +60,7 @@ const NavBar = ({ activeSection, setActiveSection }) => (
       <div style={{
         display: 'flex',
         gap: '30px',
+        alignItems: 'center',
       }}>
         {['HOME', 'GAMES', 'CHARACTERS', 'ABOUT'].map(item => (
           <div 
@@ -86,11 +87,16 @@ const NavBar = ({ activeSection, setActiveSection }) => (
             }}></span>
           </div>
         ))}
+        <a href="https://t.me/ctonnetwork" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>
+          Telegram
+        </a>
+        <a href="https://x.com/CTon_Network" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>
+          Twitter
+        </a>
       </div>
     </div>
   </nav>
 );
-
 const CharacterInfoCard = ({ character, onClose }) => (
   <div style={{
     position: 'fixed',
