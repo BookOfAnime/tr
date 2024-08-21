@@ -56,7 +56,7 @@ const NavBar = ({ activeSection, setActiveSection }) => (
       maxWidth: '1200px',
       margin: '0 auto',
     }}>
-      <a href="https://www.dextools.io/app/en/ton/pair-explorer/EQAwLWdyWQ1h4wLbdLqq6HmDI8EFayNPcAJ9rtsh4q2EEGyT?t=1720998783266" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+      <a href="https://t.me/CarTONNetwork" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
         <img 
           src="/dt.png" 
           alt="CarTON Network Logo" 
@@ -97,7 +97,7 @@ const NavBar = ({ activeSection, setActiveSection }) => (
         <a href="https://t.me/CarTONNetwork" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>
           Telegram
         </a>
-        <a href="https://twitter.com/CarTONNetwork" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>
+        <a href="https://t.me/CarTronNetworkPortal" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>
           Twitter
         </a>
       </div>
