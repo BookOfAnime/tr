@@ -62,7 +62,7 @@ const NavBar = ({ activeSection, setActiveSection }) => (
           alt="CarTON Network Logo" 
           style={{ height: '40px', marginRight: '10px' }} 
         />
-        <div style={{ fontWeight: 'bold', fontSize: '24px', color: '#0098ea' }}>CarTON Network</div>
+        <div style={{ fontWeight: 'bold', fontSize: '24px', color: '#fc0a00' }}>CarTRON Network</div>
       </a>
       <div style={{
         display: 'flex',
@@ -74,7 +74,7 @@ const NavBar = ({ activeSection, setActiveSection }) => (
             key={item} 
             style={{ 
               cursor: 'pointer',
-              color: activeSection === item.toLowerCase() ? '#0098ea' : '#fff',
+              color: activeSection === item.toLowerCase() ? '#fc0a00' : '#fff',
               fontWeight: activeSection === item.toLowerCase() ? 'bold' : 'normal',
               transition: 'all 0.3s ease',
               position: 'relative',
@@ -89,7 +89,7 @@ const NavBar = ({ activeSection, setActiveSection }) => (
               left: 0,
               width: activeSection === item.toLowerCase() ? '100%' : '0%',
               height: '2px',
-              backgroundColor: '#0098ea',
+              backgroundColor: '#fc0a00',
               transition: 'width 0.3s ease',
             }}></span>
           </div>
@@ -136,7 +136,7 @@ const CharacterInfoCard = ({ character, onClose }) => (
         justifyContent: 'space-between',
         alignItems: 'center',
       }}>
-        <h2 style={{ color: '#0098ea', margin: 0 }}>{character.name}</h2>
+        <h2 style={{ color: '#fc0a00', margin: 0 }}>{character.name}</h2>
         <button 
           onClick={onClose}
           style={{
@@ -172,7 +172,7 @@ const CharacterInfoCard = ({ character, onClose }) => (
           onClick={onClose} 
           style={{
             padding: '10px 20px',
-            backgroundColor: '#0098ea',
+            backgroundColor: '#fc0a00',
             color: 'white',
             border: 'none',
             borderRadius: '5px',
@@ -246,7 +246,7 @@ const CharacterSpotlight = React.memo(({ character, onClick }) => {
           position: 'absolute',
           top: '10px',
           right: '10px',
-          backgroundColor: '#0098ea',
+          backgroundColor: '#fc0a00',
           borderRadius: '50%',
           width: '30px',
           height: '30px',
@@ -308,7 +308,7 @@ const CartoonNetworkWebsite = () => {
       case 'home':
         return (
           <div>
-            <h1 style={{ color: '#0098ea', marginBottom: '30px', fontSize: '3em', textAlign: 'center', textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>Welcome to CarTON Network</h1>
+            <h1 style={{ color: '#fc0a00', marginBottom: '30px', fontSize: '3em', textAlign: 'center', textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>Welcome to CarTRON Network</h1>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px', marginBottom: '50px' }}>
               {characters.map(char => (
                 <CharacterSpotlight key={char.name} character={char} onClick={handleCharacterClick} />
@@ -325,7 +325,7 @@ const CartoonNetworkWebsite = () => {
       case 'games':
         return (
           <div>
-            <h1 style={{ color: '#0098ea', marginBottom: '30px', fontSize: '3em', textAlign: 'center', textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>CarTON Network Games</h1>
+            <h1 style={{ color: '#fc0a00', marginBottom: '30px', fontSize: '3em', textAlign: 'center', textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>CarTRON Network Games</h1>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '30px' }}>
               {games.map(game => (
                 <GameCard key={game.name} game={game} onClick={(game) => setActiveGame(game.name)} />
@@ -336,7 +336,7 @@ const CartoonNetworkWebsite = () => {
       case 'characters':
         return (
           <div>
-            <h1 style={{ color: '#0098ea', marginBottom: '30px', fontSize: '3em', textAlign: 'center', textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>Meet Our Characters</h1>
+            <h1 style={{ color: '#fc0a00', marginBottom: '30px', fontSize: '3em', textAlign: 'center', textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>Meet Our Characters</h1>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px' }}>
               {characters.map(char => (
                 <CharacterSpotlight key={char.name} character={char} onClick={handleCharacterClick} />
@@ -347,9 +347,9 @@ const CartoonNetworkWebsite = () => {
       case 'about':
         return (
           <div>
-            <h1 style={{ color: '#0098ea', marginBottom: '30px', fontSize: '3em', textAlign: 'center', textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>About CarTON Network</h1>
+            <h1 style={{ color: '#fc0a00', marginBottom: '30px', fontSize: '3em', textAlign: 'center', textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>About CarTRON Network</h1>
             <p style={{ color: '#fff', fontSize: '1.2em', lineHeight: '1.6', maxWidth: '800px', margin: '0 auto', textAlign: 'center', backgroundColor: 'rgba(0,0,0,0.5)', padding: '20px', borderRadius: '15px' }}>
-              CarTON Network brings your favorite cartoon characters to life in a whole new way. 
+            CarTRON Network brings your favorite cartoon characters to life in a whole new way. 
               Join Ruben, Tons, Doxter, and Frida on exciting adventures and challenging games. 
               This is where nostalgia meets the future of Crypto!
             </p>
@@ -367,7 +367,7 @@ const CartoonNetworkWebsite = () => {
         <button onClick={() => setActiveGame(null)} style={{
           padding: '15px 30px',
           marginBottom: '30px',
-          backgroundColor: '#0098ea',
+          backgroundColor: '#fc0a00',
           color: 'white',
           border: 'none',
           borderRadius: '30px',
@@ -395,7 +395,7 @@ const CartoonNetworkWebsite = () => {
       <NavBar activeSection={activeSection} setActiveSection={setActiveSection} />
       
       <main style={{
-        background: 'linear-gradient(135deg, #0F3443 0%, #0098ea 100%)',
+        background: 'linear-gradient(135deg, #0F3443 0%, #fc0a00 100%)',
         padding: '60px 5%',
         minHeight: 'calc(100vh - 60px)',
       }}>
@@ -420,7 +420,7 @@ const CartoonNetworkWebsite = () => {
         padding: '30px 5%',
         textAlign: 'center',
       }}>
-        <p>© 2024 CarTON Network. All rights reserved.</p>
+        <p>© 2024 CarTRON Network. All rights reserved.</p>
       </footer>
     </div>
   );

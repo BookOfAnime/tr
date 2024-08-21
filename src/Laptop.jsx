@@ -182,12 +182,12 @@ const Laptop = ({ powertonImage }) => {
             padding: '20px 40px',
             fontSize: 'max(18px, min(5vw, 28px))',
             fontWeight: 'bold',
-            backgroundColor: '#0098ea',
+            backgroundColor: '#fc0a00',
             color: 'white',
             border: 'none',
             borderRadius: '50px',
             cursor: 'pointer',
-            boxShadow: '0 6px 0 #0072b1, 0 12px 20px rgba(0, 0, 0, 0.2)',
+            boxShadow: '0 6px 0 #fc0a00, 0 12px 20px rgba(0, 0, 0, 0.2)',
             transition: 'all 0.3s ease',
             pointerEvents: 'auto',
             position: 'relative',
@@ -207,12 +207,12 @@ const Laptop = ({ powertonImage }) => {
         </span>
         <style jsx>{`
             button:hover {
-                background-color: #00a8ff;
+                background-color: #fc0a00;
                 box-shadow: 0 4px 0 #0072b1, 0 8px 16px rgba(0, 0, 0, 0.3);
                 transform: translateY(2px);
             }
             button:active {
-                background-color: #0072b1;
+                background-color: #fc0a00;
                 box-shadow: 0 2px 0 #005b8e, 0 6px 10px rgba(0, 0, 0, 0.3);
                 transform: translateY(4px);
             }

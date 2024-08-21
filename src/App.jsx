@@ -29,10 +29,10 @@ const LoadingScreen = ({ progress }) => (
       padding: '20px',
       borderRadius: '10px',
     }}>
-      <h2 style={{ color: '#fff', marginTop: '20px', fontFamily: 'Arial, sans-serif' }}>
-        Loading CarTON Network...
+      <h2 style={{ color: '#fc0a00', marginTop: '20px', fontFamily: 'Arial, sans-serif' }}>
+        Loading CarTRON Network...
       </h2>
-      <div style={{ width: '200px', backgroundColor: '#4ECDC4', borderRadius: '10px', marginTop: '20px' }}>
+      <div style={{ width: '200px', backgroundColor: '#fc0a00', borderRadius: '10px', marginTop: '20px' }}>
         <div style={{
           width: `${progress}%`,
           height: '20px',
@@ -86,6 +86,7 @@ const Scene = () => {
     >
       <group scale={scale}>
         <Laptop powertonImage="/powerton-09.png" />
+        
         {/* <CNBlue scale={0.4} position={[0, 1.35, 0]}/> */}
       </group>
       <ambientLight intensity={10} />

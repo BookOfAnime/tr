@@ -45,7 +45,7 @@ const TonsTimeAdventure = () => {
 
   return (
     <div style={{ textAlign: 'center', padding: '20px', backgroundColor: '#45B7D1', borderRadius: '15px', color: 'white' }}>
-      <h2>Tons' Time Adventure</h2>
+      <h2>TRons' Time Adventure</h2>
       <p>Score: {score}</p>
       <p>Time Left: {time}</p>
       {!gameOver && <p>Set the clock to: {targetTime}</p>}
