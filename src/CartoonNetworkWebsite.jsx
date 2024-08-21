@@ -35,7 +35,7 @@ const characters = [
 const games = [
   { name: "Doxter's Lab Puzzle", image: "/Doxter.webp", color: "#FF6B6B", component: DextersMemoryGame },
   { name: "Ruben's Whack-a-Villain", image: "/ruben.webp", color: "#4ECDC4", component: RobinsWhackAVillain },
-  { name: "Tons' Time Adventure", image: "/Tons.webp", color: "#45B7D1", component: TonsTimeAdventure },
+  { name: "TRons' Time Adventure", image: "/Tons.webp", color: "#45B7D1", component: TonsTimeAdventure },
   { name: "Fridds's Art Challenge", image: "/Fridd.webp", color: "#F7B801", component: FriddsArtChallenge },
 ];
 
